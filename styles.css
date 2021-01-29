@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Barlow:wght@500&display=swap');
+
+:root {
+    --primary-color: rgba( 93,167,188,1);
+    --secondary-color: rgba(192,229,240,1);
+    --tertiary-color: rgba(138,199,216,1);
+    --quaternary-color: rgba( 58,135,157,1);
+    --quinary-color: rgba( 34,117,140,1);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-color);
+    font-family: "BArlow", sans-serif;
+}
+
+
+/* overlay */
+
+.overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    transform: translate(-100vw);
+    font-family: 'Barlow', sans-serif;
+}
+
+.overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.over-slide-left {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-100vw);
+}
+
+/* nav menu items */
+nav,
+nav ul {
+    height: vh;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    list-style: none;
+}
+
+nav ul li {
+    height: 20vh;
+    overflow: hidden;
+}
+
+nav li a {
+    position: relative;
+    top: 45%;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+nav li:hover {
+    transform: scale(1, 1.1);
+}
+
+nav li a::before {
+    content: "";
+    width: 25vw;
+    height: 3px;
+    background-color: smoke;
+    position: absolute;
+    top: 47.5%;
+    left: 0;
+    opacity: 0;
+}
+
+nav li a:hover::before {
+    opacity: 1;
+}
+
+nav li:nth-last-of-type(1) {
+    background-color: var(--secondary-color);
+}
+nav li:nth-last-of-type(2) {
+    background-color: var(--tertiary-color);
+}
+nav li:nth-last-of-type(3) {
+    background-color: var(--quaternary-color);
+}
+nav li:nth-last-of-type(4) {
+    background-color: var(--quinary-color);
+}
+
+
+/* slide in animation with delay for each nav item */
+
+.slide-in-1 {
+    animation: slide-in 0.4s linear 0.2s both;
+  }
+  
+  .slide-in-2 {
+    animation: slide-in 0.4s linear 0.4s both;
+  }
+  
+  .slide-in-3 {
+    animation: slide-in 0.4s linear 0.6s both;
+  }
+  
+  .slide-in-4 {
+    animation: slide-in 0.4s linear 0.8s both;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  /* slide out animation */
+  
+  .slide-out-1 {
+    animation: slide-out 0.5s linear 0.5s both;
+  }
+  
+  .slide-out-2 {
+    animation: slide-out 0.5s linear 0.4s both;
+  }
+  
+  .slide-out-3 {
+    animation: slide-out 0.5s linear 0.3s both;
+  }
+  
+  .slide-out-4 {
+    animation: slide-out 0.5s linear 0.2s both;
+  }
+  
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+/* menu bars */
+.menu-wrapper {
+    position: fixed;
+    top: 1rem;
+    z-index: 10;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px 0;
+    transition: 0.4s;
+  }
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+/* sections styles */
+
+section {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+  }
+
+section#home {
+      background-image: url("https://images.unsplash.com/photo-1508020963102-c6c723be5764?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center center;
+  }
+
+.title {
+    position: absolute;
+    z-index: 2;
+    top: 0.25rem;
+    right: 5rem;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 1px solid;
+  }
+
+section#about{
+      background-color: var(--secondary-color);
+  }
+
+section#projects {
+      background-color: var(--tertiary-color);
+  }
+
+section#social {
+      background-color: var(--quaternary-color);
+      height: 25vh;
+  }
+
+footer {
+    background-color: var(--quinary-color);
+    text-align: center;
+    height: 15vh;
+}  
