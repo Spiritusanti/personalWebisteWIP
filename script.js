@@ -28,7 +28,7 @@ function toggleNav() {
     } else {
         // animate out overlay
         overlay.classList.replace('overlay-slide-right', 'overlay-slide-left')
-        // animate out
+        // animate out - nav items
         navAnimation('in', 'out')
     }
 }

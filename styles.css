@@ -17,7 +17,7 @@ html {
 body {
     margin: 0;
     background-color: var(--primary-color);
-    font-family: "BArlow", sans-serif;
+    font-family: "Barlow", sans-serif;
 }
 
 
@@ -205,7 +205,7 @@ section {
       align-items: center;
       letter-spacing: 1px;
   }
-
+/* Home Section */
 section#home {
       background-image: url("https://images.unsplash.com/photo-1508020963102-c6c723be5764?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
       background-size: cover;
@@ -222,19 +222,85 @@ section#home {
     color: #fff;
     border-bottom: 1px solid;
   }
+  
+.sub-title {
+  position: absolute;
+  z-index: 2;
+  top: 3.25rem;
+  right: 7.5rem;
+  font-size: 1rem;
+  font-family: "basalmiq sans", sans-serif;
+  padding-bottom: 5px;
+  color: #fff;
+}
 
+/* About Section */
 section#about{
       background-color: var(--secondary-color);
   }
 
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  gap: 25px;
+}
+
+.text-wrapper h1 {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.text-wrapper p {
+  font-family: 'balsamiq sans', sans-serif;
+  font-size: 20px;
+}
+
+/* Projects section */
 section#projects {
       background-color: var(--tertiary-color);
   }
+
+  .projects-wrapper ul {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    gap: 15px;
+    list-style: none;
+  }
+
+  .project-wrapper a {
+    text-decoration: none;
+  }
+
+/* social section */
 
 section#social {
       background-color: var(--quaternary-color);
       height: 25vh;
   }
+
+.social-wrapper h3 {
+  position: absolute;
+  color: #fff;
+  top: 1rem;
+  border-bottom: 1px solid;
+}
+
+.social-wrapper ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.github {
+  
+}
+.social-wrapper a {
+  text-decoration: none;
+}
 
 footer {
     background-color: var(--quinary-color);
