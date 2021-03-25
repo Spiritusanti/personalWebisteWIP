@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Barlow:wght@500&display=swap');
+.header-wrapper {
+    box-sizing: border-box;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    font-family: "Basalmiq sans", sans-serif;
+    color: black;
+    border-bottom: 1px solid;
+  }
+  
+.sub-title {
+  font-size: 1rem;
+  font-family: "basalmiq sans", sans-serif;
+  padding-bottom: 5px;
+  color: black;
+}

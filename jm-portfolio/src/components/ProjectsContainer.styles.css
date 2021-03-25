@@ -1,0 +1,25 @@
+section#projects {
+    background-color: var(--tertiary-color);
+    height: 100vh;
+    width: 100vw;
+    }
+  
+    section#projects::-webkit-scrollbar{
+      display: none;
+    }
+  
+  .projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    font-family: "Barlow", sans-serif;
+    box-shadow: 0 0 10px black;
+  }
+  
+  @media (min-width: 800px) {
+    .page-content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }

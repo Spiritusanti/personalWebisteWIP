@@ -1,0 +1,22 @@
+.social-wrapper {
+    height: 15vh;
+    width: 100vw;
+    text-align: center;
+}
+
+h3 {
+    position: absolute;
+    right: 45vw;
+    border-bottom: 1px solid black;
+}
+
+.links {
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.links a{
+    padding: 5px;
+}
